@@ -132,6 +132,7 @@
         <ImageView
             android:id="@+id/airwaysImg"
             android:layout_width="match_parent"
+            android:scaleType="fitCenter"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/test_img" />
     </androidx.cardview.widget.CardView>

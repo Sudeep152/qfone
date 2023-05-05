@@ -29,11 +29,14 @@ class AirwaysAdapter(var list: List<Data>):
 
     override fun onBindViewHolder(holder: AirWaysViewHolder, position: Int) {
        val data = list[position]
-        holder.AireWaysId.text = data.airline[0].id.toString()
-        holder.name.text =data.airline[0].name.toString()
+        holder.AireWaysId.text = data._id.toString()
+        holder.name.text =data.airline[0].name
+
         holder.country.text=data.airline[0].country.toString()
        holder.slogan.text = data.airline[0].slogan
         holder.website.text =data.airline[0].website
+        holder.trips.text=data.trips.toString()
+        holder.txtname.text=   data.name.toString()
 
         Glide.with(holder.itemView.context)
             .load(data.airline[0].logo)
@@ -49,6 +52,7 @@ class AirwaysAdapter(var list: List<Data>):
         val website = itemView.findViewById<TextView>(R.id.txtWebsite)
         val slogan =itemView.findViewById<TextView>(R.id.txtSlogan)
         val image  =itemView.findViewById<ImageView>(R.id.airwaysImg)
+        val txtname = itemView.findViewById<TextView>(R.id.txtname)
 
     }
 
